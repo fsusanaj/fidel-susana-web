@@ -2256,6 +2256,56 @@ body.menu-open .menu-toggle span:last-child {
   transform: translate(-50%, 0);
 }
 
+/* ---------- WhatsApp flotante ---------- */
+.wa-float {
+  position: fixed;
+  right: 24px;
+  bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  z-index: 140;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--green);
+  box-shadow: 0 14px 34px -12px rgba(11, 11, 15, 0.55);
+  transition: transform 0.35s var(--ease), background 0.35s var(--ease),
+    color 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+
+.wa-float svg {
+  width: 27px;
+  height: 27px;
+}
+
+.wa-float:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: #25d366;
+  color: var(--ink);
+  box-shadow: 0 18px 40px -12px rgba(37, 211, 102, 0.65);
+}
+
+.wa-float:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .wa-float {
+    right: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    width: 52px;
+    height: 52px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wa-float {
+    transition: none;
+  }
+}
+
 /* ---------- Reveal ---------- */
 .reveal {
   opacity: 0;

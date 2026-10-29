@@ -340,7 +340,9 @@
 
       const subject = "Nuevo proyecto" + (service ? ": " + service : "") + " — " + name;
       const bodyLines = [
-        "Hola Fidel,",
+        "Hola Fidel, te escribo desde tu web.",
+        "",
+        "*" + subject + "*",
         "",
         message,
         "",
@@ -356,20 +358,18 @@
         bodyLines.push("Servicio de interés: " + service);
       }
 
-      const mailto =
-        "mailto:hola@fidelsusana.com?subject=" +
-        encodeURIComponent(subject) +
-        "&body=" +
+      const whatsapp =
+        "https://wa.me/527778930598?text=" +
         encodeURIComponent(bodyLines.join("\n"));
 
       if (status) {
         status.className = "form-status is-success";
         status.textContent =
-          "Mensaje preparado. Se abrirá tu aplicación de correo para enviarlo; si no ocurre, escríbeme a hola@fidelsusana.com.";
+          "Mensaje preparado. Se abrirá WhatsApp para enviarlo; si no ocurre, escríbeme al +52 777 893 0598.";
       }
 
-      showToast("Abriendo tu aplicación de correo…");
-      window.location.href = mailto;
+      showToast("Abriendo WhatsApp…");
+      window.open(whatsapp, "_blank", "noopener");
 
       window.setTimeout(function () {
         form.reset();

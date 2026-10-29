@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fsusanaj.github.io/fidel-susana-web/sitemap.xml
