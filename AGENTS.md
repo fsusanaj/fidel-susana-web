@@ -23,6 +23,7 @@ js/main.js            Interacciones (menú, reveals, contadores, FAQ, formulario
 img/logo-fidel-susana.png          Logo original proporcionado por el cliente
 img/logo-fidel-susana-mark.png     Logo recortado, fondo transparente, trazos negros
 img/logo-fidel-susana-white.png    Igual al anterior, trazos blancos para fondos oscuros
+google9d307faa90bcdea5.html        Verificación de Google Search Console (no borrar)
 robots.txt            Reglas de rastreo + referencia al sitemap
 sitemap.xml           Sitemap de la única URL del sitio
 404.html              Página de error con la misma estética
@@ -75,8 +76,20 @@ sitemap.xml           Sitemap de la única URL del sitio
   (`WebSite`, `ProfessionalService`, `FAQPage`), `robots.txt` y `sitemap.xml`.
   Al cambiar de dominio hay que actualizar esas URLs absolutas y el enlace
   `/fidel-susana-web/` de `404.html`.
-- Las métricas (40+, 98%, 3x, 24/7) y el texto de la cita son contenido de
-  ejemplo; deben ajustarse a datos reales del negocio.
+- Google Search Console: propiedad `https://fsusanaj.github.io/fidel-susana-web/`
+  verificada el 2026-10-29 con el archivo HTML de la raíz (no borrarlo ni
+  cambiar la URL, o se pierde la verificación). Sitemap enviado y indexación de
+  la home solicitada el mismo día (no repetir la solicitud).
+- Pendiente de revisar desde el 2026-11-01: en Search Console > Sitemaps el
+  estado debe pasar de "No se ha podido obtener" a "Correcto" (1 página); buscar
+  `site:fsusanaj.github.io/fidel-susana-web` en Google para confirmar la
+  indexación (puede tardar hasta ~2 semanas); revisar Rendimiento cuando haya
+  datos. Si sigue fallando tras 2 días, investigar (el sitemap responde 200).
+- Las métricas se cambiaron (2026-10-29) por datos verificables de la propia
+  página: 6 áreas de servicio, 4 etapas de proceso, 12+ tecnologías y 24h de
+  tiempo de respuesta (compromiso que debe cumplirse). Ya no hay cifras
+  inventadas de proyectos o satisfacción; añadirlas solo con datos reales.
+- El texto de la cita es de marca (frase de Fidel Susana), no un testimonio.
 - Los testimonios no son de clientes reales; la cita es de marca.
 - Breakpoints principales: 1080px, 900px (menú móvil), 640px y 380px.
 - No añadir frameworks ni pasos de build sin motivo; el valor del proyecto es
