@@ -23,6 +23,9 @@ js/main.js            Interacciones (menú, reveals, contadores, FAQ, formulario
 img/logo-fidel-susana.png          Logo original proporcionado por el cliente
 img/logo-fidel-susana-mark.png     Logo recortado, fondo transparente, trazos negros
 img/logo-fidel-susana-white.png    Igual al anterior, trazos blancos para fondos oscuros
+robots.txt            Reglas de rastreo + referencia al sitemap
+sitemap.xml           Sitemap de la única URL del sitio
+404.html              Página de error con la misma estética
 ```
 
 ## Secciones de la página
@@ -52,8 +55,9 @@ img/logo-fidel-susana-white.png    Igual al anterior, trazos blancos para fondos
 - Acordeón FAQ accesible (`aria-expanded`, `aria-controls`).
 - Scroll spy para marcar el enlace activo del menú.
 - Formulario: valida nombre, email y mensaje; muestra errores accesibles
-  (`aria-invalid`, `aria-describedby`); construye un `mailto:` con asunto y
-  cuerpo y avisa que se abrirá el cliente de correo. No hay backend.
+  (`aria-invalid`, `aria-describedby`); construye un enlace `wa.me` con el
+  mensaje redactado y abre WhatsApp en una pestaña nueva. No hay backend.
+- Botón flotante de WhatsApp (`.wa-float`) en todas las pantallas.
 - Año del footer actualizado automáticamente.
 - Respeta `prefers-reduced-motion`.
 
@@ -64,8 +68,13 @@ img/logo-fidel-susana-white.png    Igual al anterior, trazos blancos para fondos
   transparencia. No hace falta regenerarlas salvo que cambie el logo original.
 - El logo se usa completo (marco + nombre) como marca junto al wordmark "Fidel
   Susana" en el header y footer.
-- El correo de contacto es un placeholder editable:
-  `hola@fidelsusana.com` (aparece en contacto, footer y en el `mailto` del JS).
+- El correo de contacto es `fsusanaj@gmail.com` (contacto, footer y JSON-LD).
+- WhatsApp: `+52 777 893 0598` (`https://wa.me/527778930598`), usado en el
+  formulario, el botón flotante, contacto y footer.
+- SEO: canonical, Open Graph/Twitter con URL absoluta, JSON-LD
+  (`WebSite`, `ProfessionalService`, `FAQPage`), `robots.txt` y `sitemap.xml`.
+  Al cambiar de dominio hay que actualizar esas URLs absolutas y el enlace
+  `/fidel-susana-web/` de `404.html`.
 - Las métricas (40+, 98%, 3x, 24/7) y el texto de la cita son contenido de
   ejemplo; deben ajustarse a datos reales del negocio.
 - Los testimonios no son de clientes reales; la cita es de marca.
